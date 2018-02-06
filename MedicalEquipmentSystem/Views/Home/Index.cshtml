@@ -1,0 +1,22 @@
+﻿@model MedicalEquipmentSystem.ViewModels.HomeIndexViewModel
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <h1>@Model.CurrentMessage</h1>
+    <table>
+        @foreach (var restuarnt in Model.restaurant)
+        {
+            <tr>
+                <td> @restuarnt.id </td>
+                <td>@restuarnt.Name</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@restuarnt.id">More</a>
+                </td>
+            </tr>
+        }
+    </table>
+</body>
+</html>
