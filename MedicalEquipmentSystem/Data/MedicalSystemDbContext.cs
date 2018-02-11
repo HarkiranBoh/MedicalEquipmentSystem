@@ -1,9 +1,6 @@
 ﻿using MedicalEquipmentSystem.Models;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+
 
 namespace MedicalEquipmentSystem.Data
 {
@@ -15,5 +12,6 @@ namespace MedicalEquipmentSystem.Data
 
         }
         public DbSet<Resturant> Resturants {get; set;}
+        public DbSet<Product> Products { get; set; }
     }
 }

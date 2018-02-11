@@ -1,0 +1,24 @@
+﻿@model MedicalEquipmentSystem.ViewModels.ProductViewModel
+
+@{
+    ViewBag.Title = "Products Page";
+
+}
+
+<h1>Prodcuts</h1>
+<table>
+    @foreach (var prodcuts in Model.product)
+    {
+        <tr>
+            <td>@prodcuts.Name </td>
+            <td>@prodcuts.Price</td>
+            <td>
+                <a asp-action="More details" asp-route-id="@prodcuts.id">More</a>
+            </td>
+        </tr>
+    }
+</table>
+
+@section footer {
+    lol
+}

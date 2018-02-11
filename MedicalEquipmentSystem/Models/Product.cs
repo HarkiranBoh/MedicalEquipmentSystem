@@ -6,12 +6,16 @@ using System.Threading.Tasks;
 
 namespace MedicalEquipmentSystem.Models
 {
-    public class Resturant
+    public class Product
     {
         public int id { get; set; }
 
-        [Display(Name="Form")]
+        [Display(Name = "Form")]
         [Required, MaxLength(80)]
-        public string Name { get; set; } 
+        public string Name { get; set; }
+        public int Quantity { get; set; }
+        public int Price { get; set; }
     }
+
+  
 }

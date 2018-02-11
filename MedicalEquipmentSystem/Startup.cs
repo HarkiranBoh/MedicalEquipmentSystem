@@ -26,6 +26,7 @@ namespace MedicalEquipmentSystem
             services.AddDbContext<MedicalSystemDbContext>(
                 options => options.UseSqlServer(_configuration.GetConnectionString("MedicalSystem")));
             services.AddScoped<IResturantData, SqlResturantData>();
+            services.AddScoped<IProductData, SqlProductData>();
             services.AddMvc();
         }
 
@@ -52,6 +53,7 @@ namespace MedicalEquipmentSystem
         {
             // /Home/index/4
             routeBuilder.MapRoute("Default", "{controller=Home}/{action=Index}/{id?}");
+            routeBuilder.MapRoute("Prodcuts", "{controller=Home}/action=Products/{id?}");
         }
     }
 }
